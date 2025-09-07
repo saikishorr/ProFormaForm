@@ -1,5 +1,7 @@
-
 <?php
+// if (isset($_POST['submit']))
+// {
+
 $Dedutrustname = $_POST["Dedutrustname"];
 $educationalname = $_POST["educationalname"];
 $educationaladdress = $_POST["educationaladdress"];
@@ -20,8 +22,8 @@ $coordinatorcontact = $_POST["coordinatorcontact"];
 $coordinatormobile = $_POST["coordinatormobile"];
 $coordinatoremail = $_POST["coordinatoremail"];
 $date = $_POST["date"];
-
-
+// echo $date;
+// exit;
     //database details
     $host = "localhost";
     $username = "root";
@@ -63,16 +65,36 @@ $date = $_POST["date"];
     coordinatormobile = VALUES(coordinatormobile),
     coordinatoremail = VALUES(coordinatoremail),
     date = VALUES(date)";
+$rs = mysqli_query($con, $sql);
+if($rs)
+{
+    header("Location: form2.html");
+    exit;
+
+   //ob_start();
+}
+// ?>
+// <h1> Proforma From no. 1</h1>
+// <p> Name: <?php echo $Dedutrustname;?> </p>
+// <p> Email: <?php echo $educationalname;?> </p>
+
+// <?php
+// $body = ob_get_clean();
+
+// $body = iconv("UTF-8", "UTF-8//IGNORE", $body);
+
+// include("mpdf-7.0.0/src/Mpdf.php");
+// $mpdf=new \Mpdf('c','A4','','', 0,0,0,0,0,0);
+
+// // write HTML TO DPF
+// $mpdf->WriteHTML($body);
+
+// //output pdf
+// $mpdf->Output('form1.pdf', 'D');
 
 
-    
- // send query to the database to add values and confirm if successful
-    $rs = mysqli_query($con, $sql);
-    if($rs)
-    {
-        header("Location: form2.html");
-        exit;
+//  // send query to the database to add values and confirm if successful
+//     ?>
 
-    }
-
-?>
+<!-- 
+$body  include ("mpdf/mpdf.php"); $mpdf new \mPDF ('c', 'A4','','' , 0, 0, 0, 0, 0, 0); ob_get_clean ( ) ; //write html to PDF $mpdf->WriteHTML ($body); //output pdf $mpdf->Output ('demo.pdf', 'D'); -->

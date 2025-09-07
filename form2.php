@@ -1,5 +1,5 @@
-
-<?php    // Get form data
+ <?php
+    // Get form data
     $schooljr = $_POST["schooljr"];
     $school = $_POST["school"];
     $Instructionname = $_POST["Instructionname"];
@@ -31,12 +31,13 @@ if(isset($_FILES["strength"])) {
    if (move_uploaded_file($_FILES["strength"]["tmp_name"], $target_file)) {
       //echo "The file ". htmlspecialchars( basename( $_FILES["strength"]["name"])). " has been uploaded.<br><br>";
    } else {
-      echo "Sorry, there was an error uploading your file.";
+      echo "Sorry, there was an error uploading total strength of students file.";
    }
 } else {
-   echo "No file was selected for upload. ";
+   echo "total strength of students file was selected for upload. ";
    
 }
+
 if(isset($_FILES["teachingstaff"])) {
     $target_dir = "./uploads/each-member-of-teaching-Staff/";
     $target_file = $target_dir . basename($_FILES["teachingstaff"]["name"]);
@@ -45,10 +46,10 @@ if(isset($_FILES["teachingstaff"])) {
     if (move_uploaded_file($_FILES["teachingstaff"]["tmp_name"], $target_file)) {
        //echo "The file ". htmlspecialchars( basename( $_FILES["teachingstaff"]["name"])). " has been uploaded.<br><br>";
     } else {
-       echo "Sorry, there was an error uploading your file.";
+       echo "Sorry, there was an error uploading each-member-of-teaching-Staff file.";
     }
  } else {
-    echo "No file was selected for upload.";
+    echo "each-member-of-teaching-Staff file was selected for upload.";
  }
 
  if(isset($_FILES["secstrength"])) {
@@ -59,10 +60,10 @@ if(isset($_FILES["teachingstaff"])) {
     if (move_uploaded_file($_FILES["secstrength"]["tmp_name"], $target_file)) {
       // echo "The file ". htmlspecialchars( basename( $_FILES["secstrength"]["name"])). " has been uploaded.<br><br>";
     } else {
-       echo "Sorry, there was an error uploading your file.";
+       echo "Sorry, there was an error uploading Secondary-total-strength-of-students file.";
     }
  } else {
-    echo "No file was selected for upload.";
+    echo "Secondary-total-strength-of-students file was selected for upload.";
  }
 
  if(isset($_FILES["secteachingstaffsec"])) {
@@ -73,10 +74,10 @@ if(isset($_FILES["teachingstaff"])) {
     if (move_uploaded_file($_FILES["secteachingstaffsec"]["tmp_name"], $target_file)) {
       // echo "The file ". htmlspecialchars( basename( $_FILES["secteachingstaffsec"]["name"])). " has been uploaded.<br><br>";
     } else {
-       echo "Sorry, there was an error uploading your file.";
+       echo "Sorry, there was an error uploading Secondary-each-member-of-teaching-Staff file.";
     }
  } else {
-    echo "No file was selected for upload.";
+    echo "Secondary-each-member-of-teaching-Staff file was selected for upload.";
  }
 
  if(isset($_FILES["jrstrength"])) {
@@ -87,10 +88,10 @@ if(isset($_FILES["teachingstaff"])) {
     if (move_uploaded_file($_FILES["jrstrength"]["tmp_name"], $target_file)) {
       // echo "The file ". htmlspecialchars( basename( $_FILES["jrstrength"]["name"])). " has been uploaded.<br><br>";
     } else {
-       echo "Sorry, there was an error uploading your file.";
+       echo "Sorry, there was an error uploading Junoir-total-strength-of-students file.";
     }
  } else {
-    echo "No file was selected for upload.";
+    echo "Junoir-total-strength-of-students file was selected for upload.";
  }
 
  if(isset($_FILES["jrteachingstaff"])) {
@@ -101,11 +102,12 @@ if(isset($_FILES["teachingstaff"])) {
     if (move_uploaded_file($_FILES["jrteachingstaff"]["tmp_name"], $target_file)) {
        //echo "The file ". htmlspecialchars( basename( $_FILES["jrteachingstaff"]["name"])). " has been uploaded.<br><br>";
     } else {
-       echo "Sorry, there was an error uploading your file.";
+       echo "Sorry, there was an error uploading Junoir-each-member-of-teaching-Staff file.";
     }
  } else {
-    echo "No file was selected for upload.";
+    echo "Junoir-each-member-of-teaching-Staff file was selected for upload.";
  }
+
 
 
 //    if(isset($_FILES["strength"])) {
@@ -175,7 +177,7 @@ if(isset($_FILES["teachingstaff"])) {
         if ($conn->query($sql) === TRUE) {
             
             header("Location: form3.html");
-            //exit;
+            exit;
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

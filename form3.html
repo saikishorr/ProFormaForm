@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <script src="script.js"></script>
     <link rel="icon" href="logo-2.ico" type="image/x-icon">
+
+
     <title>Registration Form 3 </title>
 </head>
 <body>
@@ -26,6 +27,7 @@
                 <label for="Computerlab">Whether school has Computer Lab </label>
                 <input type="text" class="form-control" name="computerlab" id="Computerlab" placeholder="yes / no" required>
             </div>
+
             <div class="col-sm-12 form-group">
                 <label for="computerdetails">If yes total no. of computers with make, when purchased or supplied by whom? </label>
                 <input type="text" class="form-control" name="computerdetailsname" id="computerdetails" placeholder="computer detials" required>
@@ -67,10 +69,12 @@
 
             </div>
             <div class="col-sm-12 form-group">
-                <label for="radio">Whether separate computer qualified instructor has been appointed? </label>
+                <p style="font-weight: bold;">Whether separate computer qualified instructor has been appointed? </p>
                 <!-- <input type="text" class="form-control" name="compteachtable" id="compteach" placeholder="Computer Teaching in School Time Table " required> -->
-                <input type="radio" name="yesno" value="yes" >Yes</label> 
-                 <input type="radio"  name="yesno" value="no">No</label>
+                <label for="yes-no" >Yes</label>
+                <input type="radio" name="yesno" id="yes-no" value="yes">
+                <label for="no-yes" > No</label> 
+                 <input type="radio"  name="yesno" id="no-yes" value="no">
                 
                 </div>
                 <div class="col-sm-8 form-group">
@@ -86,13 +90,17 @@
                 <!-- <div class="col-sm-2 form-group">
                 </div> -->
                 <div class="col-sm-2 form-group">
-                  
-                    <select  name="exampass" id="expa"><option value="dca">DCA</option><option value="bca">BCA</option><option value="bsc">B.Sc computer Science</option></select>
+                    <label for="expa">Select your Exam Pass</label>
+                    <select name="exampass" id="expa">
+                        <option value="dca">DCA</option>
+                        <option value="bca">BCA</option>
+                        <option value="bsc">B.Sc computer Science</option>
+                    </select>
                 </div>
 
                 <div class="col-sm-12 form-group">
                     <label for="equival">Equivalent to it :</label>
-                  <input type="text" class="form-control" name="equivalentto" id="equival" placeholder="Equivalentto to it" required>
+                  <input type="text" class="form-control" name="equivalentto" id="equival" placeholder="Equivalent to to it" required>
                 </div>
                <br>
                <div class="col-sm-12 form-group">
