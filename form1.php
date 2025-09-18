@@ -1,7 +1,7 @@
 <?php
 // if (isset($_POST['submit']))
 // {
-
+ 
 $Dedutrustname = $_POST["Dedutrustname"];
 $educationalname = $_POST["educationalname"];
 $educationaladdress = $_POST["educationaladdress"];
